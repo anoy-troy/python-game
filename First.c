@@ -24,6 +24,12 @@ int main()
     printf("Enter Burst Time and Arrival Time for Process %d:", i+1);
 
     scanf("%d %d",&p[i][1],&p[i][2]);
+    
+    if(p[i][2]==0)
+    {
+      printf("Arrival time invalid. Try Again!!!!!!");
+      --i;
+    }  
   }
   printf("\n\n");
   int t=w_time(p,n);
